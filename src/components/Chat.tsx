@@ -51,7 +51,7 @@ function Chat() {
                     📚
                 </div>
                 <div>
-                    <h2 className="text-[#EFDCAB] font-semibold">History Chat Bot</h2>
+                    <h2 className="text-[#EFDCAB] font-semibold">Historiador Viajero en el tiempo</h2>
                     <p className="text-sm text-[#D98324]">Online</p>
                 </div>
                 </div>
