@@ -13,6 +13,13 @@ export interface Content {
     text: string;
 }
 
+export interface ModelResponse {
+    event?:       string;
+    fromTo?:      string;
+    description?: string;
+}
+
+
 type SuccessResult<T> = {
     data: T;
     error: null;

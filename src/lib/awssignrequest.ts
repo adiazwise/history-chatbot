@@ -85,6 +85,7 @@ async function sha256(message: string): Promise<string> {
       "X-Amz-Date": string;
       "X-Amz-Content-Sha256": string;
       "Authorization": string;
+      
     };
     body: string;
   }
@@ -149,16 +150,17 @@ async function sha256(message: string): Promise<string> {
   
     // Construct the Authorization header.
     const authorizationHeader = `${algorithm} Credential=${accessKeyId}/${credentialScope}, SignedHeaders=${signedHeaders}, Signature=${signature}`;
-  
+
+   
     return {
       headers: {
         "Accept": "*/*",
         "Accept-Encoding": "gzip, deflate, br",
         "Content-Type": "application/json",
-        "X-Amz-Date": amzDate,
         "X-Amz-Content-Sha256": payloadHash,
+        "X-Amz-Date": amzDate,
         Authorization: authorizationHeader,
-
+     
       },
       body: requestPayload,
     };
