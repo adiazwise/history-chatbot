@@ -10,6 +10,7 @@ const secretAccessKey = import.meta.env.VITE_AWS_SECRET_ACCESS_KEY;
 
 export async function signAndFetch(body: object): Promise<Result<ModelResponse>> {
 
+    console.log("endpoint",endpoint);
 var signedRequest = await signRequest(endpoint, "POST", body, accessKeyId, secretAccessKey, region);
 
   const response = await fetch(endpoint, {
